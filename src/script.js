@@ -1,14 +1,14 @@
 import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import * as dat from 'dat.gui';
+//import * as dat from 'dat.gui';
 
 //Texture Loader
 const loader = new THREE.TextureLoader();
 const cross = loader.load('./cross.png');
 
 // Debug
-const gui = new dat.GUI();
+//const gui = new dat.GUI();
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl');
