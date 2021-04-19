@@ -6,7 +6,7 @@
 html,
 body {
   height: 100vh;
-  font-family: 'Poppins';
+  font-family: 'Righteous';
   color: white;
 }
 
@@ -53,10 +53,13 @@ h1 {
 
 p {
   text-align: right;
+  font-size: 1.3rem;
+  width: 40vw;
 }
 
 h1,
 p {
   flex-basis: 0;
   flex-grow: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }

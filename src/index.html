@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Digvijay Srivastava</title>
   </head>
   <body>
@@ -17,5 +23,40 @@
       </div>
     </div>
     <canvas class="webgl"></canvas>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js"
+      integrity="sha512-0bzaetZStCnsUgbCtGVxftzF/L32PNOnrMlYLXwBOKl8cUjTSSDfJVyyJsNwGoI0iE0WUqni2eEfO35kJjFj5g=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const content = CSSRulePlugin.getRule('.content:before');
+      const h1 = document.querySelector('h1');
+      const p = document.querySelector('p');
+      const tl = gsap.timeline();
+      tl.from(content, { delay: 0.5, duration: 3, cssRule: { scaleX: 0 } });
+      tl.to(
+        h1,
+        {
+          duration: 2,
+          clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
+          y: '30px',
+        },
+        '-=3'
+      );
+      tl.to(
+        p,
+        {
+          duration: 3,
+          clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
+          y: '30px',
+        },
+        '-=2'
+      );
+    </script>
   </body>
 </html>
